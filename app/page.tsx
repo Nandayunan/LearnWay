@@ -22,25 +22,25 @@ import TutorProfileModal from "@/components/tutor-profile-modal"
 export default function HomePage() {
   const categories = [
     {
-      name: "Mathematics",
+      name: "Matematika",
       icon: Calculator,
       color: "bg-gradient-to-br from-blue-100 to-blue-200 text-blue-700",
       count: "2,500+ tutors",
     },
     {
-      name: "Languages",
+      name: "Bahasa",
       icon: BookOpen,
       color: "bg-gradient-to-br from-green-100 to-green-200 text-green-700",
       count: "1,800+ tutors",
     },
     {
-      name: "Music",
+      name: "Musik",
       icon: Music,
       color: "bg-gradient-to-br from-purple-100 to-purple-200 text-purple-700",
       count: "950+ tutors",
     },
     {
-      name: "Art & Design",
+      name: "Seni & Design",
       icon: Palette,
       color: "bg-gradient-to-br from-pink-100 to-pink-200 text-pink-700",
       count: "720+ tutors",
@@ -214,27 +214,27 @@ export default function HomePage() {
       <header className="border-b bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-orange-500">TutorHome</div>
+            <div className="text-2xl font-bold text-orange-500">LearnWay</div>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/tutors" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
-              find tutors
+              Temukan Pengajar
             </Link>
             <Link href="/become-tutor" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
-              become a tutor
+              Cara menjadi pengajar
             </Link>
             <Link href="/how-it-works" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
-              how it works
+              Bagaimana cara kerjanya?
             </Link>
           </nav>
           <div className="flex items-center space-x-3">
             <Link href="/login">
               <Button variant="ghost" className="text-gray-700 hover:text-orange-500">
-                sign in
+                Login
               </Button>
             </Link>
             <Link href="/register">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6">sign up</Button>
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6">Daftar</Button>
             </Link>
           </div>
         </div>
@@ -244,13 +244,12 @@ export default function HomePage() {
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-            Find Your Perfect <span className="text-orange-500">Tutor</span>
+            Temukan Kesempurnaan dalam <span className="text-orange-500">Belajar</span>
             <br />
-            <span className="text-4xl md:text-5xl text-gray-600">Learn Anything, Anywhere</span>
+            <span className="text-4xl md:text-5xl text-gray-600">Belajar apapun dan dimanapun</span>
           </h1>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Connect with qualified tutors for personalized learning experiences. From academic subjects to creative
-            skills, find the perfect match for your learning journey.
+            Terhubung dengan tutor berkualifikasi untuk pengalaman belajar yang personal. Dari mata pelajaran akademik hingga keterampilan kreatif, temukan yang paling cocok untuk perjalanan belajar Anda.
           </p>
 
           {/* Enhanced Search Bar */}
@@ -259,14 +258,14 @@ export default function HomePage() {
               <div className="flex-1 relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
                 <Input
-                  placeholder="What do you want to learn?"
+                  placeholder="Kamu mau belajar apa?"
                   className="pl-12 border-0 focus-visible:ring-0 text-lg h-14 bg-transparent"
                 />
               </div>
               <div className="flex-1 relative">
                 <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
                 <Input
-                  placeholder="Your location"
+                  placeholder="Lokasi kamu"
                   className="pl-12 border-0 focus-visible:ring-0 text-lg h-14 bg-transparent"
                 />
               </div>
@@ -274,7 +273,7 @@ export default function HomePage() {
                 size="lg"
                 className="h-14 px-10 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl font-semibold"
               >
-                Find Tutors
+                Temukan
               </Button>
             </div>
           </div>
@@ -283,15 +282,15 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6 rounded-2xl bg-white/60 backdrop-blur-sm">
               <div className="text-4xl font-bold text-orange-500 mb-2">15,000+</div>
-              <div className="text-gray-600 font-medium">Expert Tutors</div>
+              <div className="text-gray-600 font-medium">Guru Berpengalaman</div>
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/60 backdrop-blur-sm">
               <div className="text-4xl font-bold text-orange-500 mb-2">100,000+</div>
-              <div className="text-gray-600 font-medium">Happy Students</div>
+              <div className="text-gray-600 font-medium">Alumni Hebat</div>
             </div>
             <div className="text-center p-6 rounded-2xl bg-white/60 backdrop-blur-sm">
               <div className="text-4xl font-bold text-orange-500 mb-2">200+</div>
-              <div className="text-gray-600 font-medium">Subjects Available</div>
+              <div className="text-gray-600 font-medium">Pembelajaran</div>
             </div>
           </div>
         </div>
@@ -300,9 +299,9 @@ export default function HomePage() {
       {/* Enhanced Categories */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Popular Categories</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Kategori Popular</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our wide range of subjects from academic to creative skills
+            Jelajahi berbagai macam subjek kami mulai dari keterampilan akademis hingga kreatif
           </p>
         </div>
 
@@ -329,9 +328,9 @@ export default function HomePage() {
       {/* Featured Tutors - Superprof Style */}
       <section className="container mx-auto px-4 py-20 bg-gradient-to-r from-blue-50 to-purple-50">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Featured Piano Tutors</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Guru Terbaik</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet our top-rated piano tutors ready to help you master the keys
+            Ketemu dengan tutor terbaik kami yang siap membantu kamu mencapai tujuan belajar
           </p>
         </div>
 
@@ -398,7 +397,7 @@ export default function HomePage() {
             size="lg"
             className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent rounded-full px-8 py-3 font-semibold"
           >
-            View All Piano Tutors
+            Lihat Semua Guru
           </Button>
         </div>
       </section>
@@ -406,9 +405,9 @@ export default function HomePage() {
       {/* Student Reviews Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Students Say</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Apa yang siswa katakan</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real feedback from students who've transformed their learning journey with us
+            Feed Back nyata dari siswa yang telah mengubah perjalanan belajar mereka bersama kami
           </p>
         </div>
 
@@ -452,9 +451,9 @@ export default function HomePage() {
       {/* FAQ Section */}
       <section className="container mx-auto px-4 py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Fast Answer and Question</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to know about finding and working with tutors
+            Segala hal yang perlu Anda ketahui tentang menemukan dan bekerja dengan tutor
           </p>
         </div>
 

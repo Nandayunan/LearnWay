@@ -115,10 +115,10 @@ export default function RegisterPage() {
             <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
               <BookOpen className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-gray-900">TutorHome</span>
+            <span className="text-2xl font-bold text-gray-900">LearnWay</span>
           </Link>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">join TutorHome</h1>
-          <p className="text-gray-600">create your account and start your learning journey</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Gabung Learnway</h1>
+          <p className="text-gray-600">Buat akun untuk menikmati pengalaman baru</p>
         </div>
 
         {/* Progress Indicator */}
@@ -127,9 +127,8 @@ export default function RegisterPage() {
             {[1, 2, 3].map((step) => (
               <div key={step} className="flex items-center">
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
-                    currentStep >= step ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-600"
-                  }`}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${currentStep >= step ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-600"
+                    }`}
                 >
                   {step}
                 </div>
@@ -138,7 +137,7 @@ export default function RegisterPage() {
             ))}
           </div>
           <div className="flex justify-center mt-2">
-            <span className="text-sm text-gray-600">step {currentStep} of 3</span>
+            <span className="text-sm text-gray-600">tahapan {currentStep} dari 3</span>
           </div>
         </div>
 
@@ -148,41 +147,39 @@ export default function RegisterPage() {
             {currentStep === 1 && (
               <div className="space-y-6">
                 <div className="text-center">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">choose your role</h2>
-                  <p className="text-gray-600">how would you like to use TutorHome?</p>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Pilih peranmu</h2>
+                  <p className="text-gray-600">bagaimana Anda ingin menggunakan Learnway?</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Card
-                    className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${
-                      userType === "student" ? "ring-2 ring-blue-500 bg-blue-50" : "hover:bg-gray-50"
-                    }`}
+                    className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${userType === "student" ? "ring-2 ring-blue-500 bg-blue-50" : "hover:bg-gray-50"
+                      }`}
                     onClick={() => setUserType("student")}
                   >
                     <CardContent className="p-8 text-center">
                       <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <User className="w-8 h-8 text-blue-600" />
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">i'm a student</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Calon Murid</h3>
                       <p className="text-gray-600 text-sm">
-                        looking for tutors to help me learn new skills and improve my knowledge
+                        mencari tutor untuk membantu saya mempelajari keterampilan baru dan meningkatkan pengetahuan saya
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card
-                    className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${
-                      userType === "teacher" ? "ring-2 ring-orange-500 bg-orange-50" : "hover:bg-gray-50"
-                    }`}
+                    className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${userType === "teacher" ? "ring-2 ring-orange-500 bg-orange-50" : "hover:bg-gray-50"
+                      }`}
                     onClick={() => setUserType("teacher")}
                   >
                     <CardContent className="p-8 text-center">
                       <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <GraduationCap className="w-8 h-8 text-orange-600" />
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">i'm a teacher</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Calon Pengajar</h3>
                       <p className="text-gray-600 text-sm">
-                        ready to share my expertise and help students achieve their learning goals
+                        siap untuk berbagi keahlian saya dan membantu siswa mencapai tujuan pembelajaran mereka
                       </p>
                     </CardContent>
                   </Card>
@@ -191,7 +188,7 @@ export default function RegisterPage() {
                 <div className="flex justify-between">
                   <Link href="/login">
                     <Button variant="outline" className="bg-transparent">
-                      back to login
+                      Kembali Ke Login
                     </Button>
                   </Link>
                   <Button
@@ -199,7 +196,7 @@ export default function RegisterPage() {
                     disabled={!userType}
                     className="bg-blue-600 hover:bg-blue-700"
                   >
-                    continue
+                    Lanjutkan
                   </Button>
                 </div>
               </div>
@@ -209,15 +206,15 @@ export default function RegisterPage() {
             {currentStep === 2 && (
               <div className="space-y-6">
                 <div className="text-center">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">basic information</h2>
-                  <p className="text-gray-600">tell us about yourself</p>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Informasi Dasar</h2>
+                  <p className="text-gray-600">Informasi tentang dirimu</p>
                 </div>
 
                 <form className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="firstName" className="text-sm font-medium text-gray-700">
-                        first name *
+                        Nama Awal *
                       </Label>
                       <Input
                         id="firstName"
@@ -230,7 +227,7 @@ export default function RegisterPage() {
                     </div>
                     <div>
                       <Label htmlFor="lastName" className="text-sm font-medium text-gray-700">
-                        last name *
+                        Nama Akhir *
                       </Label>
                       <Input
                         id="lastName"
@@ -245,7 +242,7 @@ export default function RegisterPage() {
 
                   <div>
                     <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                      email address *
+                      Alamat Email *
                     </Label>
                     <Input
                       id="email"
@@ -286,7 +283,7 @@ export default function RegisterPage() {
                     </div>
                     <div>
                       <Label htmlFor="confirmPassword" className="text-sm font-medium text-gray-700">
-                        confirm password *
+                        konfirmasi password *
                       </Label>
                       <div className="relative mt-1">
                         <Input
@@ -314,7 +311,7 @@ export default function RegisterPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
-                        phone number
+                        nomor telepon *
                       </Label>
                       <Input
                         id="phone"
@@ -326,7 +323,7 @@ export default function RegisterPage() {
                     </div>
                     <div>
                       <Label htmlFor="location" className="text-sm font-medium text-gray-700">
-                        location *
+                        lokasi *
                       </Label>
                       <Input
                         id="location"
@@ -342,10 +339,10 @@ export default function RegisterPage() {
 
                 <div className="flex justify-between">
                   <Button variant="outline" onClick={() => setCurrentStep(1)} className="bg-transparent">
-                    back
+                    Kembali
                   </Button>
                   <Button onClick={() => setCurrentStep(3)} className="bg-blue-600 hover:bg-blue-700">
-                    continue
+                    Lanjut
                   </Button>
                 </div>
               </div>
@@ -356,12 +353,12 @@ export default function RegisterPage() {
               <div className="space-y-6">
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    {userType === "student" ? "learning preferences" : "teaching profile"}
+                    {userType === "student" ? "learning preferences" : "Profile Pengajar"}
                   </h2>
                   <p className="text-gray-600">
                     {userType === "student"
                       ? "help us personalize your learning experience"
-                      : "tell us about your teaching expertise"}
+                      : "Beri tahu kami lebih banyak tentang dirimu dan keahlian mengajarmu"}
                   </p>
                 </div>
 
@@ -371,7 +368,7 @@ export default function RegisterPage() {
                     <>
                       <div>
                         <Label className="text-base font-medium mb-3 block">
-                          what subjects are you interested in? *
+                          bidang apa yang bisa kamu ajari *
                         </Label>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-h-48 overflow-y-auto p-3 border rounded-lg bg-gray-50">
                           {subjects.map((subject) => (
@@ -412,7 +409,7 @@ export default function RegisterPage() {
                   {userType === "teacher" && (
                     <>
                       <div>
-                        <Label className="text-base font-medium mb-3 block">what subjects can you teach? *</Label>
+                        <Label className="text-base font-medium mb-3 block">kamu bisa di bidang apa? *</Label>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-h-48 overflow-y-auto p-3 border rounded-lg bg-gray-50">
                           {subjects.map((subject) => (
                             <div key={subject} className="flex items-center space-x-2">
@@ -428,13 +425,13 @@ export default function RegisterPage() {
                           ))}
                         </div>
                         <p className="text-xs text-gray-500 mt-2">
-                          select all subjects you can teach (minimum 1 required)
+                          Pilih semua bidang yang kamu ahli (minimal 1 pilihan)
                         </p>
                       </div>
 
                       <div>
                         <Label htmlFor="description" className="text-sm font-medium text-gray-700">
-                          teaching description *
+                          Deskripsi pengajar *
                         </Label>
                         <Textarea
                           id="description"
@@ -449,7 +446,7 @@ export default function RegisterPage() {
 
                       <div>
                         <Label htmlFor="education" className="text-sm font-medium text-gray-700">
-                          education background *
+                          Latar belakang pendidikan *
                         </Label>
                         <Textarea
                           id="education"
@@ -465,7 +462,7 @@ export default function RegisterPage() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                           <Label htmlFor="teachingExperience" className="text-sm font-medium text-gray-700">
-                            teaching experience *
+                            Pengalaman mengajar *
                           </Label>
                           <Select
                             value={formData.teachingExperience}
@@ -485,7 +482,7 @@ export default function RegisterPage() {
                         </div>
                         <div>
                           <Label htmlFor="hourlyRate" className="text-sm font-medium text-gray-700">
-                            hourly rate (usd) *
+                            Tarif /jam (Rp) *
                           </Label>
                           <Input
                             id="hourlyRate"
@@ -503,7 +500,7 @@ export default function RegisterPage() {
 
                       <div>
                         <Label htmlFor="experience" className="text-sm font-medium text-gray-700">
-                          additional experience
+                          Pengalaman tambahan
                         </Label>
                         <Textarea
                           id="experience"
@@ -594,9 +591,8 @@ export default function RegisterPage() {
                     </Button>
                     <Button
                       type="submit"
-                      className={`text-white ${
-                        userType === "student" ? "bg-blue-600 hover:bg-blue-700" : "bg-orange-600 hover:bg-orange-700"
-                      }`}
+                      className={`text-white ${userType === "student" ? "bg-blue-600 hover:bg-blue-700" : "bg-orange-600 hover:bg-orange-700"
+                        }`}
                     >
                       create {userType} account
                     </Button>
@@ -610,9 +606,9 @@ export default function RegisterPage() {
         {/* Footer */}
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>
-            already have an account?{" "}
+            Sudah punya Learnway?{" "}
             <Link href="/login" className="text-blue-600 hover:text-blue-800 font-medium">
-              sign in here
+              Login disini
             </Link>
           </p>
         </div>
